@@ -1,0 +1,29 @@
+---
+export interface Props {
+	prevHref?: string;
+	prevLabel?: string;
+	nextHref: string;
+	nextLabel: string;
+}
+
+const { prevHref, nextHref, prevLabel, nextLabel } = Astro.props;
+---
+
+<nav class="nav">
+	{prevHref && prevLabel ? <a href={prevHref}>{prevLabel}</a> : <div/>}
+	<a href={nextHref}>
+		{nextLabel}
+	</a>
+</nav>
+<style>
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		max-width: 60ch;
+		margin: 0 auto;
+	}
+
+	.nav > a {
+		
+	}
+</style>
