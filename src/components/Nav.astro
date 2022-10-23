@@ -1,19 +1,16 @@
 ---
+import pages from '../lib/pages';
 export interface Props {
-	prevHref?: string;
-	prevLabel?: string;
-	nextHref: string;
-	nextLabel: string;
+	pageKey: string;
 }
 
-const { prevHref, nextHref, prevLabel, nextLabel } = Astro.props;
+const { pageKey } = Astro.props;
+const page = pages[pageKey as keyof typeof pages];
 ---
 
 <nav class="nav">
-	{prevHref && prevLabel ? <a href={prevHref}>{prevLabel}</a> : <div/>}
-	<a href={nextHref}>
-		{nextLabel}
-	</a>
+	{page.prev ? <a href={page.prev === 'intro' ? '/' : page.prev}>{pages[page.prev].name}</a> : <div/>}
+	{page.next ? <a href={page.next}>{pages[page.next].name}</a> : <div/>}
 </nav>
 <style>
 	.nav {
