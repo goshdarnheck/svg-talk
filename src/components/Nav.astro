@@ -8,19 +8,14 @@ const { pageKey } = Astro.props;
 const page = pages[pageKey as keyof typeof pages];
 ---
 
-<nav class="nav">
-	{page.prev ? <a href={page.prev === 'intro' ? '/' : page.prev}>{pages[page.prev].name}</a> : <div/>}
-	{page.next ? <a href={page.next}>{pages[page.next].name}</a> : <div/>}
+<nav>
+	{page.prev ? <a href={page.prev === 'intro' ? '/' : page.prev}>←</a> : <div/>}
+	{page.next ? <a href={page.next}>→</a> : <div/>}
 </nav>
 <style>
-	.nav {
+	nav {
 		display: flex;
 		justify-content: space-between;
-		max-width: 60ch;
-		margin: 0 auto;
-	}
-
-	.nav > a {
-		
+		font-size: 2em;
 	}
 </style>

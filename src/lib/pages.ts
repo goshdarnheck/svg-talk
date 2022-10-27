@@ -21,7 +21,7 @@ const pages:Pages = {
 	'animating': { name: 'Animating', prev: 'styling', next: 'optimizing' },
 	'optimizing': { name: 'Optimizing', prev: 'animating', next: 'creating' },
 	'creating': { name: 'Creating', prev: 'optimizing', next: 'more' },
-	'more': { name: 'More', prev: 'optimizing', next: null }
+	'more': { name: 'More', prev: 'creating', next: null }
 }
 
 export default pages;
