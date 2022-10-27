@@ -6,6 +6,7 @@ export interface Props {
 import Nav from '../components/Nav.astro';
 import Title from '../components/Title.astro';
 import pages from '../lib/pages';
+import 'highlight.js/styles/github.css';
 
 const { title, pageKey } = Astro.props;
 ---
@@ -65,3 +66,9 @@ const { title, pageKey } = Astro.props;
 		color: var(--secondary);
 	}
 </style>
+<script>
+	import hljs from 'highlight.js/lib/core';
+	import xml from 'highlight.js/lib/languages/xml';
+	hljs.registerLanguage('xml', xml);
+	hljs.highlightAll();
+</script>
