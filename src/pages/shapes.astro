@@ -1,14 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Svg from '../components/Svg.astro';
+import Circle from '../svg/circle.svg?raw';
+import Rect from '../svg/rect.svg?raw';
+import Line from '../svg/line.svg?raw';
+import Ellipse from '../svg/ellipse.svg?raw';
+import Polyline from '../svg/polyline.svg?raw';
+import Polygon from '../svg/polygon.svg?raw';
+// https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
 ---
 
 <Layout pageKey="shapes">
 	<h2>Circle</h2>
-	<h2>Line</h2>
+	<pre><code>{Circle}</code></pre>
+	<div class="example"><Svg filename="circle" /></div>
+
 	<h2>Rect</h2>
+	<pre><code>{Rect}</code></pre>
+	<div class="example"><Svg filename="rect" /></div>
+
 	<h2>Ellipse</h2>
+	<pre><code>{Ellipse}</code></pre>
+	<div class="example"><Svg filename="ellipse" /></div>
+
+	<h2>Line</h2>
+	<pre><code>{Line}</code></pre>
+	<div class="example"><Svg filename="line" /></div>
+
+	<h2>Polyline</h2>
+	<pre><code>{Polyline}</code></pre>
+	<div class="example"><Svg filename="polyline" /></div>
+
 	<h2>Polygon</h2>
-	https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
-	https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
-	https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients
+	<pre><code>{Polygon}</code></pre>
+	<div class="example"><Svg filename="polygon" /></div>
 </Layout>

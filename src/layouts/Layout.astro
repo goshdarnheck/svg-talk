@@ -45,14 +45,11 @@ const { title, pageKey } = Astro.props;
 		margin: 0;
 	}
 
-	code {
-		font-family: Consolas;
-	}
-
 	main {
 		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+		padding: 0 4em 4em;
+		font-size: 20px;
+		max-width: 100ch;
 	}
 
 	a,
@@ -64,6 +61,40 @@ const { title, pageKey } = Astro.props;
 	a:hover,
 	a:active {
 		color: var(--secondary);
+	}
+
+	ul {
+		padding-left: 0;
+		list-style-position: inside;
+		list-style-type: circle;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 6rem;
+		font-variant: small-caps;
+		font-weight: 800;
+		font-family: Consolas;
+		margin-top: 0;
+	}
+
+	h2,
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.example {
+		display: flex;
+		justify-content: space-around;
+		margin: 2em;
+	}
+
+	.example svg {
+		outline: 5px dashed black;
 	}
 </style>
 <script>

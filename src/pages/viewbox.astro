@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Svg from '../components/Svg.astro';
+import Polygon from '../svg/polygon.svg?raw';
+import Polygonv from '../svg/polygonv.svg?raw';
+// https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox
+---
+
+<Layout pageKey="viewbox">
+	<pre><code>{Polygon}</code></pre>
+	<div class="example"><Svg filename="polygon" /></div>
+	<pre><code>{Polygonv}</code></pre>
+	<div class="example"><Svg filename="polygonv" /></div>
+</Layout>
