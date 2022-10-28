@@ -1,9 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Bolt from '../svg/bolt.svg?raw';
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS
+// https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/
 ---
 
 <Layout pageKey="styling">
-  <p>Inline SVGs can be styled with CSS. SVGs used in img tags are not.</p>
-  <p>some example here I guess</p>
+  <pre><code>{Bolt}</code></pre>
+  <pre><code class="language-css">{`path {
+  fill: LightSeaGreen;
+  opacity: 0.5;
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+  stroke: gold;
+  stroke-width: 5px;
+}`}</code></pre>
+  <div class="example hack"><Fragment set:html={Bolt} /></div>
 </Layout>
+
+<style is:global>
+  .hack path {
+    fill: LightSeaGreen;
+    opacity: 0.5;
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+    stroke: gold;
+    stroke-width: 5px;
+  }
+</style>

@@ -16,12 +16,14 @@ const pages:Pages = {
 	'shapes': { name: 'Shapes', prev: 'how', next: 'groups' },
 	'groups': { name: 'Groups', prev: 'shapes', next: 'paths' },
 	'paths': { name: 'Paths', prev: 'groups', next: 'viewbox' },
-	'viewbox': { name: 'Viewbox', prev: 'paths', next: 'styling' },
+	'viewbox': { name: 'Viewbox', prev: 'paths', next: 'use' },
+	'use': { name: 'Use', prev: 'viewbox', next: 'styling' },
 	'styling': { name: 'Styling', prev: 'viewbox', next: 'animating' },
 	'animating': { name: 'Animating', prev: 'styling', next: 'optimizing' },
 	'optimizing': { name: 'Optimizing', prev: 'animating', next: 'creating' },
 	'creating': { name: 'Creating', prev: 'optimizing', next: 'more' },
-	'more': { name: 'More', prev: 'creating', next: null }
+	'more': { name: 'More', prev: 'creating', next: 'thanks' },
+	'thanks': { name: 'Thank You!', prev: 'more', next: null }
 }
 
 export default pages;

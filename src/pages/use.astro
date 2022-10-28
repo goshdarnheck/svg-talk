@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Svg from '../components/Svg.astro';
+import Use from '../svg/use.svg?raw';
+// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use
+---
+
+<Layout pageKey="use">
+	<pre><code>{Use}</code></pre>
+	<div class="example"><Svg filename="use" /></div>
+</Layout>

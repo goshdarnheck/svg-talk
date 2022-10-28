@@ -107,6 +107,10 @@ const { title, pageKey } = Astro.props;
 <script>
 	import hljs from 'highlight.js/lib/core';
 	import xml from 'highlight.js/lib/languages/xml';
+	import css from 'highlight.js/lib/languages/css';
+	import javascript from 'highlight.js/lib/languages/javascript';
 	hljs.registerLanguage('xml', xml);
+	hljs.registerLanguage('css', css);
+	hljs.registerLanguage('javascript', javascript);
 	hljs.highlightAll();
 </script>

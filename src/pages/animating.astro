@@ -1,7 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Bolt from '../svg/bolt.svg?raw';
+// https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS
+// https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/
 ---
 
 <Layout pageKey="animating">
-  <p>You can animate them in the browswer with JavaScript!</p>
+  <pre><code>{Bolt}</code></pre>
+  <pre><code class="language-css">{`@keyframes rotate {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+.bolt.animate path {
+  animation: rotate 4s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
+  transform-origin: 50% 50%;
+}`}</code></pre>
+  <pre><code class="language-javascript">{`const bolt = document.querySelector('.bolt');
+
+bolt.onclick = (e => {
+  if (bolt.classList.contains('animate')) {
+    bolt.classList.remove('animate');
+  } else {
+    bolt.classList.add('animate');
+  }
+})`}</code></pre>
+  <div class="example bolt"><Fragment set:html={Bolt} /></div>
 </Layout>
+
+<script>
+  const bolt = document.querySelector('.bolt');
+
+  bolt.onclick = (e => {
+    if (bolt.classList.contains('animate')) {
+      bolt.classList.remove('animate');
+    } else {
+      bolt.classList.add('animate');
+    }
+  })
+</script>
+
+<style is:global>
+  @keyframes rotate {
+    50% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .bolt.animate path {
+    animation: rotate 4s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
+    transform-origin: 50% 50%;
+  }
+</style>

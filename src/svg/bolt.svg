@@ -1,6 +1,6 @@
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <path
-    style="fill:#ffe200;fill-opacity:1;"
+    fill="#ffe200"
     d="M121 5 45 119 112 99l-62 94L167 73 99 81Z"
   />
 </svg>
