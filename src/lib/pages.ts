@@ -18,7 +18,7 @@ const pages:Pages = {
 	'paths': { name: 'Paths', prev: 'groups', next: 'viewbox' },
 	'viewbox': { name: 'Viewbox', prev: 'paths', next: 'use' },
 	'use': { name: 'Use', prev: 'viewbox', next: 'styling' },
-	'styling': { name: 'Styling', prev: 'viewbox', next: 'animating' },
+	'styling': { name: 'Styling', prev: 'use', next: 'animating' },
 	'animating': { name: 'Animating', prev: 'styling', next: 'optimizing' },
 	'optimizing': { name: 'Optimizing', prev: 'animating', next: 'creating' },
 	'creating': { name: 'Creating', prev: 'optimizing', next: 'more' },

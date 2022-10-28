@@ -9,8 +9,8 @@ const page = pages[pageKey as keyof typeof pages];
 ---
 
 <nav>
-	{page.prev ? <a href={page.prev === 'intro' ? '/' : page.prev}>←</a> : <div/>}
-	{page.next ? <a href={page.next}>→</a> : <div/>}
+	{page.prev ? <a href={page.prev === 'intro' ? '/' : `/${page.prev}`}>←</a> : <div/>}
+	{page.next ? <a href={`/${page.next}`}>→</a> : <div/>}
 </nav>
 <style>
 	nav {
