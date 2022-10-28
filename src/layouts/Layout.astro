@@ -63,12 +63,6 @@ const { title, pageKey } = Astro.props;
 		color: var(--secondary);
 	}
 
-	ul {
-		padding-left: 0;
-		list-style-position: inside;
-		list-style-type: circle;
-	}
-
 	h1 {
 		text-align: center;
 		font-size: 6rem;
@@ -95,6 +89,19 @@ const { title, pageKey } = Astro.props;
 
 	.example svg {
 		outline: 5px dashed black;
+	}
+
+	.list {
+		display: flex;
+		justify-content: center;
+		font-size: 2em;
+	}
+
+	.list ul {
+		display: inline-block;
+		padding-left: 0;
+		list-style-position: inside;
+		list-style-type: circle;
 	}
 </style>
 <script>

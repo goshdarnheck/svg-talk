@@ -3,9 +3,19 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout pageKey="optimizing">
-	<h2>svgo</h2>
-	<ul>
-		<li>npm: <a href="https://www.npmjs.com/package/svgo">https://www.npmjs.com/package/svgo</a></li>
-		<li>webapp: <a href="https://jakearchibald.github.io/svgomg/">https://jakearchibald.github.io/svgomg/</a></li>
-	</ul>
+	<div class="list">
+		<ul>
+			<li>
+				<span>svgo: <a href="https://www.npmjs.com/package/svgo" target="_blank">https://www.npmjs.com/package/svgo</a></span>
+				<pre><code>npm -g install svgo</code></pre>
+			</li>
+			<li>webapp: <a href="https://jakearchibald.github.io/svgomg/" target="_blank">https://jakearchibald.github.io/svgomg/</a></li>
+		</ul>
+	</div>
 </Layout>
+
+<style>
+	code {
+		color: green !important;
+	}
+</style>

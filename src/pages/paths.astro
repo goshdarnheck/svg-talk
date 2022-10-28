@@ -1,8 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Svg from '../components/Svg.astro';
+import Bolt from '../svg/bolt.svg?raw';
 // https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
+/*
+d = draw/drawn
+M = move
+L = line to
+l = line to but delta
+H = horizontal line
+V = vertical line
+Z = close path
+C = Bézier Curves - C x1 y1, x2 y2, x y
+S = Several Bézier curves
+Q = quadratic Bézier curve
+T = Several quadratic Béziers
+A = A rx ry x-axis-rotation large-arc-flag sweep-flag x y
+*/
 ---
 
 <Layout pageKey="paths">
-	<p>Embed here</p>
+	<div class="example"><Svg filename="bolt" /></div>
+	<pre><code class="language-xml">{Bolt}</code></pre>
 </Layout>

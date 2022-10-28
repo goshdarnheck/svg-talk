@@ -4,10 +4,38 @@ import Svg from '../components/Svg.astro';
 ---
 
 <Layout pageKey="creating">
-	<ul>
-		<li>Inkscape</li>https://inkscape.org/
-		<li>Figma</li>figma.com
-	</ul>
-	<Svg filename="figma" />
-	<Svg filename="inkscape" />
+	<div class="cards">
+		<div>
+			<a href="https://inkscape.org/" target="_blank">
+				<h2>Inkscape</h2>
+				<p><Svg filename="inkscape" /></p>
+				<p>https://inkscape.org/</p>
+			</a>
+		</div>
+		<div>
+			<a href="https://figma.com" target="_blank">
+				<h2>Figma</h2>
+				<p><Svg filename="figma" /></p>
+				<p>https://figma.com</p>
+			</a>
+		</div>
+	</div>
 </Layout>
+
+<style>
+	.cards {
+		display: flex;
+		gap: 2em;
+		justify-content: center;
+	}
+
+	.cards > div {
+		text-align: center;
+	}
+</style>
+
+<style is:global>
+	#inkscape {
+		height: 57px;
+	}
+</style>
